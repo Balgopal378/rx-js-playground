@@ -1,0 +1,19 @@
+#manage_counter {
+    input {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-right: 5px;
+    }
+    border: 3px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: scroll;
+    .record {
+        height: 50px;
+        overflow: scroll;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,16 @@
+<div id="manage_counter">
+    <input id="start" type="number" name="startTime" placeholder="Enter start value" [(ngModel)]="startTime">
+    <button (click)="onClick()">Start/Pause</button>
+    <button (click)="onReset()">Reset</button>
+
+    <div class="record" *ngIf="stopWatchInfo?.length > 0; else noInfo">
+        <div *ngFor="let data of stopWatchInfo">
+            <span>Paused at {{ data.pauseVal }}</span>
+        </div>
+    </div>
+    <ng-template #noInfo>
+        <p>Stopwatch not started once</p>
+    </ng-template>
+</div>
+
+

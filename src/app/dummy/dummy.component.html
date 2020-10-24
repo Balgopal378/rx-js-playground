@@ -1,0 +1,18 @@
+<p>dummy works!</p>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col" [appSortableColumn]="'firstName'"(sort)="sortChange($event)"><a href="#"> First </a></th>
+        <th scope="col" [appSortableColumn]="'lastName'"(sort)="sortChange($event)">Last</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <th scope="row">{{ item.id }}</th>
+        <td>{{ item.firstName }}</td>
+        <td>{{ item.lastName }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="triggerApis()">Trigger</button>

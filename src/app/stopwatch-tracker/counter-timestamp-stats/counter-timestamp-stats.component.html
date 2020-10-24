@@ -1,0 +1,9 @@
+<ng-container *ngIf="stopWatchInfo?.length > 0; else noInfo">
+    <div *ngFor="let data of stopWatchInfo">
+        <p>Started at {{ data.started | date: 'h:mm:ss a zzzz' }}</p>
+        <p>Paused at {{ data.paused | date: 'h:mm:ss a zzzz' }}</p>
+    </div>
+</ng-container>
+<ng-template #noInfo>
+    No Timestamps found
+</ng-template>

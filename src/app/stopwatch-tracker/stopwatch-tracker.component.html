@@ -1,0 +1,10 @@
+<div class="container">
+    <app-counter [timer]="timer$ | async"></app-counter>
+    <app-manage-counter
+        (manageTimer)="onManageTimer($event)"
+        [stopWatchInfo]="stopWatchInfo$ | async"
+        (resetTimer)="onResetTimer()"
+    ></app-manage-counter>
+    <app-counter-timestamp-stats [stopWatchInfo]="stopWatchInfo$ | async"></app-counter-timestamp-stats>
+    <app-counter-stats [countInfo]="countInfo$ | async"></app-counter-stats>
+</div>

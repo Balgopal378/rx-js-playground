@@ -1,0 +1,8 @@
+<div class="stats" *ngIf="countInfo; else noInfo">
+    <p>Started {{ countInfo?.startCount }}</p>
+    <p>Paused {{ countInfo?.pauseCount }}</p>
+</div>
+<ng-template #noInfo>
+    <p>No Info found</p>
+</ng-template>
+
